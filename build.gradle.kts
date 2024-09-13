@@ -26,18 +26,38 @@ repositories {
 }
 
 dependencies {
+
+    //jpa
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    //oauth2.0
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
+
+    //spring web
     implementation("org.springframework.boot:spring-boot-starter-web")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    //kotlin
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+    //lombok
     compileOnly("org.projectlombok:lombok")
-    runtimeOnly("com.mysql:mysql-connector-j")
     annotationProcessor("org.projectlombok:lombok")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    //mySQL
+    runtimeOnly("com.mysql:mysql-connector-j")
+
+    //junit
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testImplementation("org.springframework.security:spring-security-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    //spring security
+    testImplementation("org.springframework.security:spring-security-test")
+
+    //redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
 }
 
 kotlin {
